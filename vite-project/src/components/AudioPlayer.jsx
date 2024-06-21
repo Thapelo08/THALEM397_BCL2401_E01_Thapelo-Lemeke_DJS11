@@ -26,11 +26,16 @@ const AudioPlayer = () => {
             </div>
             <p>3:45</p>
         </div>
-
       </div>
-
-        </div>
-
+       <div className='hidden lg:flex items-center gap-2 opacity-75'>
+       <img className='w-4' src={assets.plays_icon} alt="" />
+        <img className='w-4' src={assets.mic_icon} alt="" />
+        <img className='w-4' src={assets.queue_icon} alt="" />
+        <img className='w-4' src={assets.speaker_icon} alt="" />
+        <img className='w-4' src={assets.volume_icon} alt="" />
+       
+       </div>
+      </div>
     )
 }
 
