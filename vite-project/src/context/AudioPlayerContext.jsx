@@ -11,7 +11,7 @@ const seekBar = useRef();
 
 const [track,setTrack ] = useState(songsData[1]);
 const [playing,setPlaying] = useState(false)
-const [time,seTime] = useState ({
+const [time,setTime] = useState ({
     currentTime:{
         second: 0,
         minute: 0
@@ -57,9 +57,26 @@ useEffect(()=>{
     }, 1000);
 },[audioRef])
 
+const contextValue = {
+    audioRef,
+    seekBar,
+    seekBg,
+    track,setTrack,
+    playing,setPlaying,
+    time,setTime, 
+    play,pause,
+    playWithId
+}
 
+return (
+    <AudioPlayerContext.Provider value={contextValue}>
+        {props.children}
+    </AudioPlayerContext.Provider>
+)
 
 }
+
+export default AudioPlayerContextProvider;
 
 
 
