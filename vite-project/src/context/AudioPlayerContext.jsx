@@ -8,8 +8,8 @@ const seekBg = useRef();
 const seekBar = useRef();
 
 const [track,setTrack ] = useState(songsData[1]);
-const [playing,setPlaying] = useState(flase)
-const [time,seTime] = useState({
+const [playing,setPlaying] = useState(false)
+const [time,seTime] = useState ({
     currentTime:{
         second: 0,
         minute: 0
@@ -36,6 +36,7 @@ const playWithId = async (id) => {
     setPlaying(true);
 }
 
-})
+
+
 
 
