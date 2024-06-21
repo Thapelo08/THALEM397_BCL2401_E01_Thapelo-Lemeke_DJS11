@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 import React from 'react'
 import { useContext } from 'react'
@@ -5,10 +6,13 @@ import Sidebar from './components/Sidebar'
 import AudioPlayer from './components/AudioPlayer'
 import Display from './components/Display'
 import { AudioPlayerContext } from './context/AudioPlayerContext'
+import { AudioContext } from './context/AudioContext'
 
 const App = () => {
 
-  const {audioRef,track} = useContext(AudioPlayerContext)
+  const {audioRef, track} = useContext(AudioPlayerContext)
+  const {audio} =useContext(AudioContext);
+  console.log('Context Value:', contextValue);
 
   return (
     <div className='h-screen bg-black'>
