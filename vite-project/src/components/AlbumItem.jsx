@@ -1,27 +1,17 @@
 import React from 'react'
-import { songsData, assets } from '../assets/assets'
+import { useNavigate } from 'react-router-dom'
 
+const AlbumItem = ({image,name,desc,id}) => {
 
-const AudioPlayer = () => {
-    return (
-        <div className='h-[10%] bg-black flex justiify-between items-center text-white px-4'>
-            <div className='hidden lg:flex items-center gap-4'>
-        <img className='w-12' src={songsData[0].image} alt="" />
-        <div>
-            <p>{songsData[0].name}</p>
-            <p>{songsData[0].desc.slice(0,12)}</p>
-        </div>
-      </div>
-      <div className='flex flex-col items-center gap-1 m-auto'>
-      <div className='flex gap-4'>
-            <img className='w-4 cursor-pointer' src={assets.shuffle_icon} alt="" />
-            <img className='w-4 cursor-pointer' src={assets.prev_icon} alt="" />
-            <img className='w-4 cursor-pointer' src={assets.play_icon} alt="" />
-            <img className='w-4 cursor-pointer' src={assets.next_icon} alt="" />
-            <img className='w-4 cursor-pointer' src={assets.loop_icon} alt="" />
-        </div>
-      </div>
+    const navigate = useNavigate()
 
-        </div>
-    )
+  return (
+    <div onClick={()=>navigate(`/album/${id}`)} className='min-w-[180px] p-2 px-3 rounded cursor-pointer hover:bg-[#ffffff26]'>
+      <img className='rounded' src={image} alt="" />
+      <p className='font-bold mt-2 mb-1'>{name}</p>
+      <p className='text-slate-200 text-sm'>{desc}</p>
+    </div>
+  )
 }
+
+export default AlbumItem
