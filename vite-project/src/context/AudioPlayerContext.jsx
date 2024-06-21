@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { createContext, useEffect, useRef, useState } from "react";
 import { songsData } from "../assets/assets";
 

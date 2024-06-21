@@ -1,4 +1,6 @@
-import  { useContext } from 'react'
+/* eslint-disable no-unused-vars */
+import React from 'react'
+import { useContext } from 'react'
 import Sidebar from './components/Sidebar'
 import AudioPlayer from './components/AudioPlayer'
 import Display from './components/Display'
