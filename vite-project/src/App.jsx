@@ -10,8 +10,8 @@ import { AudioContext } from './context/AudioContext'
 
 const App = () => {
 
-  const {audioRef, track} = useContext(AudioPlayerContext)
-  const {audio} =useContext(AudioContext);
+  const { track} = useContext(AudioPlayerContext)
+  const { audioRef } =useContext(AudioContext);
   console.log('Context Value:', contextValue);
 
   return (
